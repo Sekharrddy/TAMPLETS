@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .fb{
+            border: 2px solid black;
+             margin-right: 473px;
+            margin-left: 437px;
+            border-radius: 10px;
+            padding: 30px;
+        }
+        .uname{
+            width: 200px;
+            height: 30px;
+        }
+        .mobilenumber{
+            width: 420px;
+            height: 30px;
+        }
+        .newname{
+            width: 420px;
+            height: 30px;
+        }
+        .botton{
+            background-color: green;
+            border-radius: 8px;
+        }
+        #day{
+            width: 150px;
+            height: 36px;
+        }
+        .parent{
+            text-align: center;
+        }
+        .bottom{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form name="myform" method="POST" onsubmit= "return validation(event)" action="success.html">
+        <div class="fb">
+            <div class="parent">
+            <h2>sign up</h2>
+            <p>it's quick and easy</p><hr>
+        </div>
+        <input type="text" name="username" placeholder="first name" id="uname">
+        <input type="text" name="surname" placeholder="surname" id="uname1"><br><br>
+        <input type="text" name="mobilenumber" placeholder="mobilenumber/Email ID" id="mobilenumber"><br><br>
+        <input type="password" name="newname" placeholder="New password" id="newname"><br>
+         <dl>date of birth</dl> 
+        <!-- <input type="date" value="date" placeholder="date" required> -->
+         <select id="day1">
+            <option value="">day</option>
+            <option value="day">1</option>
+            <option value="day">2</option>
+            <option value="day">3</option>
+            <option value="day">4</option>
+            <option value="day">5</option>
+            <option value="day">6</option>
+            <option value="day">7</option>
+            <option value="day">8</option>
+            <option value="day">9</option>
+            <option value="day">10</option>
+            <option value="day">11</option>
+            <option value="day">12</option>
+            <option value="day">13</option>
+            <option value="day">14</option>
+            <option value="day">15</option>
+            <option value="day">16</option>
+            <option value="day">17</option>
+            <option value="day">18</option>
+            <option value="day">19</option>
+            <option value="day">20</option>
+            <option value="day">21</option>
+            <option value="day">22</option>
+            <option value="day">23</option>
+            <option value="day">24</option>
+            <option value="day">25</option>
+            <option value="day">26</option>
+            <option value="day">27</option>
+            <option value="day">28</option>
+            <option value="day">29</option>
+            <option value="day">30</option>
+        </select>
+        <select id="day2">
+        <option value="">month</option>
+            <option value="month">1</option>
+            <option value="month">2</option>
+            <option value="month">3</option>
+            <option value="month">4</option>
+            <option value="month">5</option>
+            <option value="month">6</option>
+            <option value="month">7</option>
+            <option value="month">8</option>
+            <option value="month">9</option>
+            <option value="month">10</option>
+            <option value="month">11</option>
+            <option value="month">12</option>
+        </select>
+        <select id="day3">
+            <option value="">year</option>
+            <option value="year">2021</option>
+            <option value="year">2022</option>
+            <option value="year">2023</option>
+            <option value="year">2024</option>
+            <option value="year">2025</option>
+            <option value="year">2026</option>
+            <option value="year">2027</option>
+            <option value="year">2028</option>
+            <option value="year">2029</option>
+            <option value="year">2030</option>
+            <option value="year">2031</option>
+            <option value="year">2032</option>
+        </select> 
+        <p>gender</p>
+           <button> <input type="radio"  name="gender" value="male" id="male">Male</button>
+            <!-- <label for="male">Male</label>  -->
+           <button> <input type="radio" name="gender" value="female">female</button>
+            <!-- <label for="female">female</label>  -->
+        <button> <input type="radio" name="gender" value="custom">custom</button>
+            <!-- <label for="custom">custom</label> -->
+            
+  
+       <p>By clicking sign up,you agree to our termes,Data policy and 
+           cookie policy. you may receive SMS. notification form us and can opt out at any time
+       </p>
+       <div class="bottom">
+       <button>sign up</button>
+       </div>
+       </div>
+    </form>
+    <script>
+        function validation(e){
+        e.preventDefault();
+            var a=document.myform.uname.value;
+            var b=document.myform.uname1.value;
+            var c=document.myform.mobilenumber.value;
+            var d=document.myform.newname.value;
+            var e=document.myform.day1.value;
+            var f=document.myform.day2.value;
+            var g=document.myform.day3.value;
+            var h=document.myform.male.value;
+            if(a==""){
+                document.getElementById("uname").style.border=" 1px solid red";
+                
+            }
+            else if(a!=""){
+                document.getElementById("uname").style.border=" 2px solid green";   
+            }
+            if(b==""){
+                document.getElementById("uname1").style.border=" 1px solid red";   
+            }
+            else if(b!=""){
+                document.getElementById("uname1").style.border=" 2px solid green";
+            }
+            if(c==""){
+                document.getElementById("mobilenumber").style.border=" 1px solid red";   
+            }
+            else if(c!=""){
+                document.getElementById("mobilenumber").style.border=" 2px solid green";
+            }
+            if(d==""){
+                document.getElementById("newname").style.border=" 1px solid red";   
+            }
+            else if(d!=""){
+                document.getElementById("newname").style.border=" 2px solid green";
+            }
+            if(e==""){
+                document.getElementById("day1").style.border=" 1px solid red";   
+            }
+            else if(e!=""){
+                document.getElementById("day1").style.border=" 2px solid green";
+            }
+            if(f==""){
+                document.getElementById("day2").style.border=" 1px solid red";   
+            }
+            else if(f!=""){
+                document.getElementById("day2").style.border=" 2px solid green";
+            }
+            if(g==""){
+                document.getElementById("day3").style.border=" 1px solid red";   
+            }
+            else if(g!=""){
+                document.getElementById("day3").style.border=" 2px solid green";
+            }
+            if(h||""){
+                document.getElementById("male").style.border=" 1px solid red";   
+            }
+            else if(h!=""){
+                document.getElementById("male").style.border=" 2px solid green";
+            }
+            
+        }
+
+    </script>
+</body>
+</html>
